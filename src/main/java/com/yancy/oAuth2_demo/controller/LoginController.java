@@ -42,6 +42,11 @@ import org.springframework.web.client.RestTemplate;
         return "redirect:/home";
     }
 
+    @GetMapping("/home")
+    @ResponseBody
+    public String home() {
+        return "hello world";
+    }
 
 
     private String getAccessToken(String code) {
